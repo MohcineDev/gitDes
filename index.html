@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>git Description</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="definition">
+            <h3>Definition</h3>
+            <p> &nLeftrightarrow; Repositories : is a container for a project you want to track with Git</p>
+            <p> &nLeftrightarrow; Commit : Save point</p>
+            <p> &nLeftrightarrow; Modified : file created or modified</p>
+            <p> &nLeftrightarrow; github is a service that lets us set up hosted repositories , remote repositories</p>
+            <p> &nLeftrightarrow; central online repository which multiple team-members could access </p>
+
+            <div class="main">
+
+                <div class="project">
+                    <p> &nLeftrightarrow; myProject folder</p>
+                    <p> &nLeftrightarrow; -- .get</p>
+                    <p> &nLeftrightarrow; -- index.html</p>
+                    <p> &nLeftrightarrow; -- style.css</p>
+                </div>
+                <div class="table">
+
+                    <table>
+                        <tr>
+                            <th>Modified</th>
+                            <th>Staging</th>
+                            <th>Comitted</th>
+                        </tr>
+                        <tr>
+                            <td>index.html</td>
+                            <td>add any changed files to staging<br> area
+                                that you want to commit</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p> &nLeftrightarrow; git --version : check the installed version of git</p>
+            <p>&nLeftrightarrow; config git username and email</p>
+            <p>&nLeftrightarrow; git config --global user.name username</p>
+            <p>&nLeftrightarrow; git config --global user.email username@mail.com</p>
+            <p>&nLeftrightarrow; git config --global user.name : get the name</p>
+
+        </div>
+
+        <div class="commandes">
+
+            <h3>Commandes</h3>
+            <p> &nLeftrightarrow; git init : create a repo in the folder you are in ( make the folder you are in a repo
+                tracked with git )
+            </p>
+            <p> &nLeftrightarrow; git status : if = red file changed and ready to be staged, if = green file staged and
+                ready to be
+                comitted</p>
+            <p> &nLeftrightarrow; git add index.html : add a file to the staging area</p>
+            <p> &nLeftrightarrow; git rm --cached index.html : remove a file from staging area</p>
+            <p> &nLeftrightarrow; git add . : add everything to the staging area and ready to be commited</p>
+            logical points adter developing certin features of a website or application - we can spilt our work by
+            different
+            comitte</p>
+            <p> &nLeftrightarrow; git commit -m "added index and style" : commit ( save ) files , m stand for message
+                something descriptive
+                because
+                you will use them in future </p>
+            <p> &nLeftrightarrow; git log --oneline : all comitte in one line</p>
+            <p> &nLeftrightarrow; staging area : extra blanket of security - allows us to review our chanfes before
+                making a comitte --
+                comitting
+                <p> &nLeftrightarrow; git log : history of all comitte</p>
+
+        </div>
+
+
+        <div class="undo">
+            <h3>undo</h3>
+            <div>
+                <p> &nLeftrightarrow; undoing things (order of danger)</p>
+            </div>
+            <div class="commit">
+                <p> &nLeftrightarrow; Checkout commit (safe)</p>
+                <p> &nLeftrightarrow; Revert commit (little safe)</p>
+                <p> &nLeftrightarrow; Reset commit (unsafe)</p>
+            </div>
+
+
+            <p> &nLeftrightarrow; git checkout af6b84c : af6b84c = commit id (detach this commit from the master branch)
+            </p>
+            <p> &nLeftrightarrow; git checkout master : reatach to the master bracnch ( like undo : Ctrl+z)</p>
+            <p> &nLeftrightarrow; git revert af6b84c : af6b84c = commit id, shift+: wq ( undo one particular commit
+                (this commande do a
+                commit
+                for us just revert the given commit 'change view height to 95' become 'Revert "change view height to
+                95"' ))
+            </p>
+
+            <p> &nLeftrightarrow; git reset af6b84c : af6b84c = commit id ( remove all the commit after this commit id
+                but not changing the
+                files)</p>
+            <p> &nLeftrightarrow; git reset af6b84c --hard : af6b84c = commit id, --hard : remove the changes after this
+                commit id</p>
+        </div>
+
+
+        <div class="branches">
+            <h3>Branches</h3>
+            <p> &nLeftrightarrow; when we create a new repository we creating a master branch and when we making commit
+                we commit only to
+                this
+                master branch</p>
+            <p> &nLeftrightarrow; master branch represent the stable version of the code which will be released or
+                published</p>
+            <p> &nLeftrightarrow; when we want to add a new feature to our code we add it to a new branch and if we like
+                it we can merge
+                this
+                featur to our master branch</p>
+            <p> &nLeftrightarrow; if we have to developers working on the same project on the same time doing two
+                different two features
+                each
+                one make a branch to its feature and when they done we can merge them to the master branch </p>
+            <p> &nLeftrightarrow; we can also delete the branch</p>
+            <p> &nLeftrightarrow; git branch screenFeatur : create new branch</p>
+            <p> &nLeftrightarrow; git branch -a : display all branches</p>
+            <p> &nLeftrightarrow; git checkout screenFeatur : work in the screenFeatur branch</p>
+            <p> &nLeftrightarrow; branche is like copy past the same project and work on it</p>
+            <p> &nLeftrightarrow; git branch -D screenFeatur : delete a branch (not merged ? -D : -d)</p>
+            <p> &nLeftrightarrow; git checkout -b screenFeatur : create new branch and work in the screenFeatur branch (
+                just a shortcut)
+            </p>
+        </div>
+
+        <div class="mergingBranchesConflicts">
+            <h3>merging Branches Conflicts</h3>
+            <p> &nLeftrightarrow; when you are happy with the features</p>
+            <p> &nLeftrightarrow; first you have to be in the branch you want to merge into (master)</p>
+            <p> &nLeftrightarrow; git merge feature-a : merge the code in feature-a with master</p>
+            <p> &nLeftrightarrow; git merge feature-b : merge the code in feature-b with master</p>
+            <p> &nLeftrightarrow; when you create a new branch and change something in the master and change the same
+                thing in the new
+                branch this may create a confilict when you want to merge them</p>
+            <p> &nLeftrightarrow; git commit </p>
+
+            <br>
+            <br>
+            <p> &nLeftrightarrow; after the is merged in GitHub make sure to <b>pull</b> the master branch to update
+                your local files</p>
+        </div>
+
+
+
+        <div class="gitHub">
+            <h3>github</h3>
+
+            <p> &nLeftrightarrow; &nbsp;&nbsp;&nbsp;&nbsp; if you have a local repository // ( clone a repo create a
+                local repository )</p>
+            <p> &nLeftrightarrow; make sure all is commited : git status</p>
+            <p> &nLeftrightarrow; git push https://github.com/gkjhfjksh/kjfksf.git master : push files to github repo
+                with the master
+                branch
+            </p>
+            <p> &nLeftrightarrow; clone by press the clone btn</p>
+            <p> &nLeftrightarrow; add alias to a url :</p>
+            <p> &nLeftrightarrow; git remote add aliasName https://github.com/projectname/name.git</p>
+            <p> &nLeftrightarrow; git remote add origin https://github.com/gkjhfjksh/kjfksf.git : give the url an alias
+                = origin</p>
+            <p> &nLeftrightarrow; push after make changes</p>
+            <p> &nLeftrightarrow; add code to stagin area then commit</p>
+            <p> &nLeftrightarrow; git push origin master</p>
+
+            <p> &nLeftrightarrow; &nbsp;&nbsp;&nbsp;&nbsp; if you dont have a local repository</p>
+            <p> &nLeftrightarrow; create one in github and clone it </p>
+            <p> &nLeftrightarrow; git clone https://github.com/gkjhfjksh/kjfksf.git : clone repo and add alias origin
+                automatically</p>
+            <p> &nLeftrightarrow; make changes</p>
+            <p> &nLeftrightarrow; git add . : add to staging area</p>
+            <p> &nLeftrightarrow; git commit -m "added index. file" : commit changes</p>
+            <p> &nLeftrightarrow; git remote -v : info about the alias for push and fetch</p>
+            <p> &nLeftrightarrow; git push origin master : push master branch files to github</p>
+
+        </div>
+
+
+        <div class="collaborate">
+            <h3>Collaborate</h3>
+            <p> &nLeftrightarrow; first make sure you are in master (update our master) and everything is commited</p>
+            <p> &nLeftrightarrow; git pull origin master : pull code from remote master branch and update our local
+                master branch with it
+            </p>
+            <p> &nLeftrightarrow; git checkout -b index-html : create your working branch dont miss with the master</p>
+            <p> &nLeftrightarrow; add to stagin area and commit it </p>
+            <p> &nLeftrightarrow; dont merge it with master</p>
+            <p> &nLeftrightarrow; git push origin index-html : push your branch to give your team the chance to
+                reviewing it before merging
+                it with master</p>
+            <p> &nLeftrightarrow; git pull origin master :</p>
+
+            <p> &nLeftrightarrow; fork means create a copy of the repo from the main account to our account</p>
+            <p> &nLeftrightarrow; clone it make changes commit it push it to github</p>
+            <p> &nLeftrightarrow; click btn 'new pull request' ..</p>
+            <hr>
+            <hr>
+            <p> &nLeftrightarrow; 1 : fork the open source repo to your account</p>
+            <p> &nLeftrightarrow; 2 : clone the repo</p>
+            <p> &nLeftrightarrow; 3 : create your branch</p>
+            <p> &nLeftrightarrow; 4 : commit your changes</p>
+            <p> &nLeftrightarrow; 5 : push the changes to your account</p>
+            <p> &nLeftrightarrow; Contribute this change to the original repository</p>
+
+            <p> &nLeftrightarrow; 1 : click btn 'new pull request' ..</p>
+            <p> &nLeftrightarrow; 2 : see if it can be merged</p>
+            <p> &nLeftrightarrow; 3 : press create pull request</p>
+            <p> &nLeftrightarrow; and the rest is on the repo owner</p>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
