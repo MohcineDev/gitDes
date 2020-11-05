@@ -16,17 +16,22 @@ p::selection {
     gap: 10px;
 }
 
+.definition, .commandes, .undo, .branches, .gitHub, .collaborate, .mergingBranchesConflicts {
+    border-radius: 10px;
+    border: solid 2px white;
+    padding: 10px;
+    margin: 5px;
+
+}
+
 .definition {
     grid-area: 1/1/2/2;
     background-color: rgb(155, 93, 82);
-    padding: 10px;
-    border-radius: 10px;
 }
-.commandes{
+
+.commandes {
     grid-area: 1/2/2/3;
-    background-color: rgb(82, 151, 155);
-    padding: 10px;
-    border-radius: 10px;
+    background-color: rgb(8, 9, 32);
 }
 
 .main {
@@ -38,43 +43,41 @@ p::selection {
     grid-area: 2/1/3/2;
     display: flex;
     flex-direction: column;
-    border-top: solid 1px cyan;
-    background-color: rgb(163, 153, 61);
-    margin: 5px;
+    background-color: rgb(56, 9, 35);
     text-align: center;
 }
 
 .branches {
     grid-area: 2/2/3/3;
     background-color: rgb(197, 94, 76);
-    padding: 10px;
-    border-radius: 10px;
-    border-top: solid 1px cyan;
-    margin: 5px;
 }
 
-.mergingBranchesConflicts{
+.mergingBranchesConflicts {
     grid-area: 3/1/4/2;
-    background-color: rgb(82, 151, 155);
-    padding: 10px;
-    border-radius: 10px;
+    background-color: rgb(88, 70, 111);
 }
-.gitHub{
+
+.gitHub {
     grid-area: 3/2/4/3;
     background-color: rgb(192, 91, 91);
-    padding: 10px;
-    border-radius: 10px;
 }
 
-.collaborate{
+.collaborate {
     grid-area: 4/1/5/3;
-    background-color: rgb(113, 69, 66);
-    padding: 10px;
-    border-radius: 10px;
+    background-color:rgb(113, 69, 66);
+  
 }
-h3{
+
+h3 {
     text-align: center;
+    background-color: rgb(69, 146, 228);
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 0;
+    color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 .project {
     border: 1px solid yellow;
     padding: 10px;
@@ -103,7 +106,6 @@ td {
     padding: 50px 10px;
 }
 
-
 .undo div p {
     display: inline-block;
 }
@@ -125,4 +127,12 @@ td {
 .undo .commit p:nth-child(3) {
     background-color: rgb(241, 122, 101);
     padding: 5px 10px;
+}
+
+span.red {
+    color: rgb(252, 63, 101);
+}
+
+span.green {
+    color: rgb(71, 241, 71);
 }
