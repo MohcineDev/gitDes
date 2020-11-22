@@ -12,8 +12,9 @@ p::selection {
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(200px, auto));
     gap: 10px;
+    margin-bottom: 50px;
 }
 
 .definition, .commandes, .undo, .branches, .gitHub, .collaborate, .mergingBranchesConflicts {
@@ -31,7 +32,7 @@ p::selection {
 
 .commandes {
     grid-area: 1/2/2/3;
-    background-color: rgb(8, 9, 32);
+    background-color: #0e0e16;
 }
 
 .main {
@@ -71,10 +72,12 @@ p::selection {
 h3 {
     text-align: center;
     background-color: rgb(69, 146, 228);
+    background-color: rgb(243, 249, 255);
     padding: 10px 0;
     border-radius: 5px;
     margin: 0;
     color: #eee;
+    color: rgb(25, 115, 156);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -135,4 +138,32 @@ span.red {
 
 span.green {
     color: rgb(71, 241, 71);
+}
+
+.git-icon{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.onGitHub {
+    position: absolute;
+    bottom: 20px;
+    color: var(--col0);
+    left: calc(50% - 61px);
+}
+ 
+.onGitHub a{
+    color: var(--col0);
+    text-decoration: none;
+}
+
+.move {
+    animation-name: moving;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+@keyframes moving {
+    50% {
+        left: calc(50% - 40px);
+    }
 }
