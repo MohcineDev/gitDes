@@ -1,6 +1,6 @@
 body {
     background-color: #313131;
-    color: rgb(181, 255, 255);
+    color: rgb(188, 230, 230);
     font-family: cursive;
 }
 
@@ -19,10 +19,9 @@ p::selection {
 
 .definition, .commandes, .undo, .branches, .gitHub, .collaborate, .mergingBranchesConflicts {
     border-radius: 10px;
-    border: solid 2px white;
+    border: solid 2px rgb(15, 162, 230);
     padding: 10px;
     margin: 5px;
-
 }
 
 .definition {
@@ -32,7 +31,7 @@ p::selection {
 
 .commandes {
     grid-area: 1/2/2/3;
-    background-color: #0e0e16;
+    background-color: #1d1d30;
 }
 
 .main {
@@ -60,13 +59,12 @@ p::selection {
 
 .gitHub {
     grid-area: 3/2/4/3;
-    background-color: rgb(192, 91, 91);
+    background-color: rgb(70, 70, 70);
 }
 
 .collaborate {
     grid-area: 4/1/5/3;
-    background-color:rgb(113, 69, 66);
-  
+    background-color: rgb(113, 69, 66);
 }
 
 h3 {
@@ -140,18 +138,27 @@ span.green {
     color: rgb(71, 241, 71);
 }
 
-.git-icon{
+p.title {
+    background-color: #105c9f;
+    display: inline;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.git-icon {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .onGitHub {
     position: absolute;
     bottom: 20px;
     color: var(--col0);
     left: calc(50% - 61px);
 }
- 
-.onGitHub a{
+
+.onGitHub a {
     color: var(--col0);
     text-decoration: none;
 }

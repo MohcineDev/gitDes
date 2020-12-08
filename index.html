@@ -13,7 +13,7 @@
 
         <div class="definition">
             <h3>Definition</h3>
-            <p> &nLeftrightarrow; Repositories : is a container for a project you want to track with Git</p>
+            <p> &nLeftrightarrow; Repositories is just a container for a project you want to track with Git</p>
             <p> &nLeftrightarrow; Commit : Save point</p>
             <p> &nLeftrightarrow; Modified : file created or modified</p>
             <p> &nLeftrightarrow; github is a service that lets us set up hosted repositories , remote repositories</p>
@@ -55,25 +55,27 @@
         <div class="commandes">
 
             <h3>Commandes</h3>
-            <p> &nLeftrightarrow; git init : turn the folder to a git repo ( folder tracked with git )
+            <p> &nLeftrightarrow; git init //turn the folder to a git repo ( folder tracked with git )
             </p>
-            <p> &nLeftrightarrow; git status : if = <span class="red">red</span> files changed and ready to be staged</p>
-            <p> &nLeftrightarrow; if = <span class="green">green</span> files    staged and ready to be committed</p>
-            <p> &nLeftrightarrow; git add index.html : add ' index.html ' file to the staging area</p>
-            <p> &nLeftrightarrow; git rm --cached index.html : remove a file from staging area</p>
-            <p> &nLeftrightarrow; git add . : add everything to the staging area and ready to be commited</p>
+            <p> &nLeftrightarrow; git status // if = <span class="red">red</span> files changed and ready to be staged
+            </p>
+            <p> &nLeftrightarrow; if = <span class="green">green</span> files staged and ready to be committed</p>
+            <p> &nLeftrightarrow; git add index.html //add ' index.html ' file to the staging area</p>
+            <p> &nLeftrightarrow; git rm --cached index.html //remove a file from staging area</p>
+            <p> &nLeftrightarrow; git add . //add everything to the staging area and ready to be commited</p>
             logical points after developing certin features of a website or application - we can spilt our work by
-            different
-            commits</p>
-            <p> &nLeftrightarrow; git commit -m "added index and style" : commit ( save ) files , 'm' stand for message
+            different commits</p>
+            <p> &nLeftrightarrow; git commit -m "added index and style" //commit ( save ) files , 'm' stand for message
                 something descriptive
                 because
                 you will use them in future </p>
-            <p> &nLeftrightarrow; git log --oneline : all commits in one line</p>
-            <p> &nLeftrightarrow; staging area : extra blanket of security - allows us to review the changes before
-                making a commit --
-                committing
-            <p> &nLeftrightarrow; git log : history of all commit</p>
+            <p> &nLeftrightarrow; git log --oneline //all commits in one line</p>
+            <p> &nLeftrightarrow; staging area is an extra blanket of security - allows us to review the changes before
+                making a commit -- committing
+            <p> &nLeftrightarrow; git log //history of all commit</p>
+            <p class="title">Rename the local master branch to main</p>
+            <p> &nLeftrightarrow; git branch -m master main</p>
+            <p> &nLeftrightarrow; if it is not working try to commit something to the master branch and try again</p>
 
         </div>
 
@@ -109,7 +111,7 @@
 
 
         <div class="branches">
-            <h3>Branches</h3>  
+            <h3>Branches</h3>
             <p> &nLeftrightarrow; create a new repository also creates a master branch and when we making commits
                 we commit only to
                 this
@@ -123,12 +125,12 @@
                 different two features each one make a branch to its feature and when they done we can merge them to the
                 master branch </p>
             <p> &nLeftrightarrow; we can also delete the branch</p>
-            <p> &nLeftrightarrow; git branch screenFeature : create new branch</p>
-            <p> &nLeftrightarrow; git branch -a : display all branches</p>
-            <p> &nLeftrightarrow; git checkout screenFeature : work in the screenFeature branch</p>
+            <p> &nLeftrightarrow; git branch screenFeature //create new branch</p>
+            <p> &nLeftrightarrow; git branch -a //display all branches</p>
+            <p> &nLeftrightarrow; git checkout screenFeature //work in the screenFeature branch</p>
             <p> &nLeftrightarrow; branche is like copy past the same project and work on it</p>
-            <p> &nLeftrightarrow; git branch -D screenFeature : delete a branch (not merged ? -D : -d)</p>
-            <p> &nLeftrightarrow; git checkout -b screenFeature : create and work in a new branch 'screenFeature' ( just
+            <p> &nLeftrightarrow; git branch -D screenFeature //delete a branch (not merged ? -D : -d)</p>
+            <p> &nLeftrightarrow; git checkout -b screenFeature //create and work in a new branch 'screenFeature' ( just
                 a shortcut)
             </p>
         </div>
@@ -139,15 +141,11 @@
             <p> &nLeftrightarrow; first you have to be in the branch you want to merge into (master)</p>
             <p> &nLeftrightarrow; git merge feature-a : merge the code in feature-a with master</p>
             <p> &nLeftrightarrow; git merge feature-b : merge the code in feature-b with master</p>
-            <p> &nLeftrightarrow; when you create a new branch and change something in the master and change the same
+            <p> &nLeftrightarrow; ' when you create a new branch and change something in the master and change the same
                 thing in the new
-                branch this may create a conflict when you want to merge them</p>
-            <p> &nLeftrightarrow; git commit </p>
-            <p> &nLeftrightarrow; after merging, in GitHub make sure to pull the master branch to update your local
-                files</p>
+                branch this may create a conflict when you want to merge them '</p>
+            <p> &nLeftrightarrow; after merging, you can push the master branch to GitHub </p>
         </div>
-
-
 
         <div class="gitHub">
             <h3>Github</h3>
@@ -156,11 +154,10 @@
                 local repository )</p>
             <p> &nLeftrightarrow; make sure all is commited : git status</p>
             <p> &nLeftrightarrow; git push https://github.com/MohcineDev/gitDes.git master : push files to github repo
-                with the master
-                branch
+                with the master branch
             </p>
             <p> &nLeftrightarrow; clone by press the clone btn</p>
-            <p> &nLeftrightarrow; add alias to a url : </p>
+            <p class="title">add alias to a url</p>
             <p> &nLeftrightarrow; git remote add aliasName https://github.com/projectname/name.git </p>
             <p> &nLeftrightarrow; git remote add origin https://github.com/MohcineDev/gitDes.git : give the url an alias
                 = origin</p>
