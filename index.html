@@ -12,7 +12,7 @@
     <div class="container">
 
         <div class="definition">
-            <h3>Definition</h3>
+            <h2>Definition</h2>
             <p> &nLeftrightarrow; Repositories is just a container for a project you want to track with Git</p>
             <p> &nLeftrightarrow; Commit : Save point</p>
             <p> &nLeftrightarrow; Modified : file created or modified</p>
@@ -54,7 +54,7 @@
 
         <div class="commandes">
 
-            <h3>Commandes</h3>
+            <h2>Commandes</h2>
             <p> &nLeftrightarrow; git init //turn the folder to a git repo ( folder tracked with git )
             </p>
             <p> &nLeftrightarrow; git status // if = <span class="red">red</span> files changed and ready to be staged
@@ -69,49 +69,48 @@
                 something descriptive
                 because
                 you will use them in future </p>
-            <p> &nLeftrightarrow; git log --oneline //all commits in one line</p>
             <p> &nLeftrightarrow; staging area is an extra blanket of security - allows us to review the changes before
                 making a commit -- committing
+            <p> &nLeftrightarrow; git log --oneline //each commit in one line</p>
             <p> &nLeftrightarrow; git log //history of all commit</p>
             <p class="title">Rename the local master branch to main</p>
             <p> &nLeftrightarrow; git branch -m master main</p>
             <p> &nLeftrightarrow; if it is not working try to commit something to the master branch and try again</p>
-
         </div>
-
 
         <div class="undo">
-            <h3>Undo</h3>
+            <h2>Undo</h2>
             <div>
-                <p> &nLeftrightarrow; undoing things (order of danger)</p>
+                <h3> undoing things (order of danger)</h3>
+                <div class="commit">
+                    <p>Checkout commit (safe)</p>
+                    <p>Revert commit (little safe)</p>
+                    <p>Reset commit (unsafe)</p>
+                </div>
             </div>
-            <div class="commit">
-                <p> &nLeftrightarrow; Checkout commit (safe)</p>
-                <p> &nLeftrightarrow; Revert commit (little safe)</p>
-                <p> &nLeftrightarrow; Reset commit (unsafe)</p>
-            </div>
-
-
-            <p> &nLeftrightarrow; git checkout af6b84c : af6b84c = commit id (detach this commit from the master branch)
+            <p> &nLeftrightarrow; git checkout af6b84c // af6b84c = commit id (detach this commit from the master
+                branch)</p>
+            <p>and see how the code is looks like before this commit this does not affect the commit history just
+                readonly</p>
+            <p> &nLeftrightarrow; git checkout master // reatach to the master bracnch ( like undo : Ctrl+z) back to
+                normal</p>
+            <p>after checking the code go back to the normal state</p>
+            <hr>
+            <p> &nLeftrightarrow; git revert af6b84c // af6b84c = commit id, :wq ( undo one particular commit
+                (this commande do a commit
+                for us just revert the given commit 'add border' become 'Revert "add border"' ))
             </p>
-            <p> &nLeftrightarrow; git checkout master : reatach to the master bracnch ( like undo : Ctrl+z)</p>
-            <p> &nLeftrightarrow; git revert af6b84c : af6b84c = commit id, shift+: wq ( undo one particular commit
-                (this commande do a
-                commit
-                for us just revert the given commit 'change view height to 95' become 'Revert "change view height to
-                95"' ))
-            </p>
-
-            <p> &nLeftrightarrow; git reset af6b84c : af6b84c = commit id ( remove all the commit after this commit id
+            <p>revert the giving commit (af6b84c)</p>
+            <hr>
+            <p> &nLeftrightarrow; git reset af6b84c // af6b84c = commit id ( remove all the commit after this commit id
                 but not changing the
                 files)</p>
-            <p> &nLeftrightarrow; git reset af6b84c --hard : af6b84c = commit id, --hard : remove the changes after this
-                commit id</p>
+            <p> &nLeftrightarrow; git reset af6b84c --hard // af6b84c = commit id, --hard // remove the changes after this
+                commit id - reset the code to a particular commit</p>
         </div>
 
-
         <div class="branches">
-            <h3>Branches</h3>
+            <h2>Branches</h2>
             <p> &nLeftrightarrow; create a new repository also creates a master branch and when we making commits
                 we commit only to
                 this
@@ -136,7 +135,7 @@
         </div>
 
         <div class="mergingBranchesConflicts">
-            <h3>Merging Branches Conflicts</h3>
+            <h2>Merging Branches Conflicts</h2>
             <p> &nLeftrightarrow; when you are happy with the features</p>
             <p> &nLeftrightarrow; first you have to be in the branch you want to merge into (master)</p>
             <p> &nLeftrightarrow; git merge feature-a : merge the code in feature-a with master</p>
@@ -148,7 +147,7 @@
         </div>
 
         <div class="gitHub">
-            <h3>Github</h3>
+            <h2>Github</h2>
 
             <p> &nLeftrightarrow; if you have a local repository // ( clone a repo create a
                 local repository )</p>
@@ -179,7 +178,7 @@
 
 
         <div class="collaborate">
-            <h3>Collaborate</h3>
+            <h2>Collaborate</h2>
             <p> &nLeftrightarrow; first make sure you are in master (update our master) and everything is commited</p>
             <p> &nLeftrightarrow; git pull origin master : pull code from remote master branch and update our local
                 master branch with it
