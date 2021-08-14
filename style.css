@@ -12,12 +12,12 @@ p::selection {
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, minmax(200px, auto));
+    grid-template-rows: repeat(5, minmax(200px, auto));
     gap: 10px;
     margin-bottom: 50px;
 }
 
-.definition, .commandes, .undo, .branches, .gitHub, .collaborate, .mergingBranchesConflicts {
+.definition, .commandes, .undo, .branches, .gitHub, .collaborate, .mergingBranchesConflicts, .token {
     border-radius: 10px;
     border: solid 4px #313131;
     box-shadow: 0 0 0 4px rgb(15, 162, 230);
@@ -62,7 +62,12 @@ p::selection {
 
 .collaborate {
     grid-area: 4/1/5/3;
+    grid-area: 4/1/5/3;
     background-color: rgb(113, 69, 66);
+}
+.token{
+    grid-area: 5/1/6/3;
+    background-color: rgb(79, 66, 113);
 }
 
 h2 {
