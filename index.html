@@ -11,8 +11,8 @@
 <body>
     <div class="container">
 
-        <div class="definition">
-            <h2>Definition</h2>
+        <section>
+            <h2> Definition</h2>
             <p> &nLeftrightarrow; Repositories is just a container for a project you want to track with Git</p>
             <p> &nLeftrightarrow; Commit : Save point</p>
             <p> &nLeftrightarrow; Modified : file created or modified</p>
@@ -20,7 +20,6 @@
             <p> &nLeftrightarrow; central online repository which multiple team-members could access </p>
 
             <div class="main">
-
                 <div class="project">
                     <p> &nLeftrightarrow; myProject folder</p>
                     <p> &nLeftrightarrow; -- .get</p>
@@ -50,9 +49,9 @@
             <p> &nLeftrightarrow; git config --global user.email "you@example.com" </p>
             <p> &nLeftrightarrow; git config --global user.name : get the name</p>
             <p> &nLeftrightarrow; to set your account's default identity. </p>
-        </div>
+        </section>
 
-        <div class="commandes">
+        <section>
 
             <h2>Commandes</h2>
             <p> &nLeftrightarrow; git init //turn the folder to a git repo ( folder tracked with git )
@@ -76,9 +75,9 @@
             <p class="title">Rename the local master branch to main</p>
             <p> &nLeftrightarrow; git branch -m master main</p>
             <p> &nLeftrightarrow; if it is not working try to commit something to the master branch and try again</p>
-        </div>
+        </section>
 
-        <div class="undo">
+        <section>
             <h2>Undo</h2>
             <div>
                 <h3> undoing things (order of danger)</h3>
@@ -108,9 +107,9 @@
             <p> &nLeftrightarrow; git reset af6b84c --hard // af6b84c = commit id, --hard // remove the changes after
                 this
                 commit id - reset the code to a particular commit</p>
-        </div>
+        </section>
 
-        <div class="branches">
+        <section>
             <h2>Branches</h2>
             <p> &nLeftrightarrow; create a new repository also creates a master branch and when we making commits
                 we commit only to
@@ -133,9 +132,13 @@
             <p> &nLeftrightarrow; git checkout -b screenFeature //create and work in a new branch 'screenFeature' ( just
                 a shortcut)
             </p>
-        </div>
+            <p class="title">Remove file from git</p>
+            <p>if the file is still in the staging area : <br> &nLeftrightarrow;  git reset &lt;  name_of_file &gt; // to unstage the file</p>
+            <p> remove the file from the repository  : <br> &nLeftrightarrow; git rm --cached &lt; name_of_file &gt; 
+            </p>
+        </section>
 
-        <div class="mergingBranchesConflicts">
+        <section>
             <h2>Merging Branches Conflicts</h2>
             <p> &nLeftrightarrow; when you are happy with the features</p>
             <p> &nLeftrightarrow; first you have to be in the branch you want to merge into (master)</p>
@@ -145,9 +148,9 @@
                 thing in the new
                 branch this may create a conflict when you want to merge them '</p>
             <p> &nLeftrightarrow; after merging, you can push the master branch to GitHub </p>
-        </div>
+        </section>
 
-        <div class="gitHub">
+        <section>
             <h2>Github</h2>
 
             <p> &nLeftrightarrow; if you have a local repository // ( clone a repo create a
@@ -174,11 +177,10 @@
             <p> &nLeftrightarrow; git commit -m "added index. file" : commit changes</p>
             <p> &nLeftrightarrow; git remote -v : info about the alias for push and fetch</p>
             <p> &nLeftrightarrow; git push origin master : push master branch files to github</p>
+        </section>
 
-        </div>
 
-
-        <div class="collaborate">
+        <section>
             <h2>Collaborate</h2>
             <p> &nLeftrightarrow; first make sure you are in master (update our master) and everything is commited</p>
             <p> &nLeftrightarrow; git pull origin master : pull code from remote master branch and update our local
@@ -209,26 +211,23 @@
             <p> &nLeftrightarrow; 2 : see if it can be merged </p>
             <p> &nLeftrightarrow; 3 : press create pull request </p>
             <p> &nLeftrightarrow; and the rest is on the repo owner </p>
-        </div>
+        </section>
 
-        <div class="token">
+        <section>
             <h2>Using Token</h2>
             <p>Token authentication requirements for Git operations </p>
             <p>using access token instead of password</p>
             <p>if the repo is already cloned remove the remote first</p>
-            <p>git remote remove &lt; remote name &gt;</p>
+            <p>&nLeftrightarrow; git remote remove &lt; remote name &gt;</p>
             <p>add the new remote with the token </p>
-            <p>git remote add &lt;remote name&gt; https://&lt;accress token&gt;@github.com/&lt;username&gt;/&lt;repo name&gt;.git</p>
-        </div>
+            <p>&nLeftrightarrow; git remote add &lt;remote name&gt; https://&lt;accress token&gt;@github.com/&lt;username&gt;/&lt;repo
+                name&gt;.git</p>
+        </section>
     </div>
-    <div class="git-icon">
-
-        <div class="onGitHub move">
-
-            <a href="https://github.com/MohcineDev" target="_blank">@Mohcinedev</a>
-        </div>
+    <div class="onGitHub">
+        <a href="https://github.com/MohcineDev" class="move" target="_blank">
+            @Mohcinedev</a>
     </div>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 
 </html>

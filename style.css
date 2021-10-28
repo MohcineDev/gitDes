@@ -17,7 +17,7 @@ p::selection {
     margin-bottom: 50px;
 }
 
-.definition, .commandes, .undo, .branches, .gitHub, .collaborate, .mergingBranchesConflicts, .token {
+section {
     border-radius: 10px;
     border: solid 4px #313131;
     box-shadow: 0 0 0 4px rgb(15, 162, 230);
@@ -25,12 +25,12 @@ p::selection {
     margin: 5px;
 }
 
-.definition {
+section:nth-child(1) {
     grid-area: 1/1/2/2;
     background-color: rgb(155, 93, 82);
 }
 
-.commandes {
+section:nth-child(2) {
     grid-area: 1/2/2/3;
     background-color: #1d1d30;
 }
@@ -40,32 +40,33 @@ p::selection {
     justify-content: space-around;
 }
 
-.undo {
-    grid-area: 2/1/3/2; 
+section:nth-child(3) {
+    grid-area: 2/1/3/2;
     background-color: rgb(56, 9, 35);
 }
 
-.branches {
+section:nth-child(4) {
     grid-area: 2/2/3/3;
     background-color: rgb(197, 94, 76);
 }
 
-.mergingBranchesConflicts {
+section:nth-child(5) {
     grid-area: 3/1/4/2;
     background-color: rgb(88, 70, 111);
 }
 
-.gitHub {
+section:nth-child(6) {
     grid-area: 3/2/4/3;
     background-color: rgb(70, 70, 70);
 }
 
-.collaborate {
+section:nth-child(7) {
     grid-area: 4/1/5/3;
     grid-area: 4/1/5/3;
     background-color: rgb(113, 69, 66);
 }
-.token{
+
+body section:last-child {
     grid-area: 5/1/6/3;
     background-color: rgb(79, 66, 113);
 }
@@ -108,30 +109,30 @@ td {
     padding: 50px 10px;
 }
 
-.undo>div {
+section:nth-child(3)>div {
     text-align: center;
 }
 
-.undo .commit {
+section:nth-child(3) .commit {
     color: black;
     display: flex;
     justify-content: space-around;
 }
 
-.undo .commit p {
+section:nth-child(3) .commit p {
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.undo .commit p:nth-child(1) {
+section:nth-child(3) .commit p:nth-child(1) {
     background-color: rgb(126, 238, 126);
 }
 
-.undo .commit p:nth-child(2) {
+section:nth-child(3) .commit p:nth-child(2) {
     background-color: rgb(234, 234, 109);
 }
 
-.undo .commit p:nth-child(3) {
+section:nth-child(3) .commit p:nth-child(3) {
     background-color: rgb(241, 122, 101);
 }
 
@@ -151,31 +152,26 @@ p.title {
     border-radius: 5px;
 }
 
-.git-icon {
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .onGitHub {
-    position: absolute;
-    bottom: 20px;
-    color: var(--col0);
-    left: calc(50% - 61px);
+    text-align: center;
 }
 
 .onGitHub a {
     color: var(--col0);
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes moving {
+     
+    50% {
+        padding-right: 30px;
+    }
 }
 
 .move {
     animation-name: moving;
     animation-iteration-count: infinite;
-    animation-duration: 5s;
-}
-
-@keyframes moving {
-    50% {
-        left: calc(50% - 40px);
-    }
+    animation-duration: 3s;
+    animation-timing-function: linear;
 }
