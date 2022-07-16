@@ -57,21 +57,18 @@
             <p> &nLeftrightarrow; git init // turn the folder to a git repo ( folder tracked with git )
             </p>
             <p> &nLeftrightarrow; git status // if = <span class="red">red</span> files changed and ready to be staged
-             // if = <span class="green">green</span> files staged and ready to be committed</p>
-            <p> &nLeftrightarrow; git add index.html //add ' index.html ' file to the staging area</p>
+                // if = <span class="green">green</span> files staged and ready to be committed</p>
+            <p> &nLeftrightarrow; git add index.html // add ' index.html ' file to the staging area</p>
             <p> &nLeftrightarrow; git reset // remove all files from staging area</p>
-            <p> &nLeftrightarrow; git rm --cached index.html //remove ( index.html ) file from staging area</p>
-            <p> &nLeftrightarrow; git add . // add everything to the staging area and ready to be commited</p>
+            <p> &nLeftrightarrow; git rm --cached index.html // remove ' index.html ' file from staging area</p>
+            <p> &nLeftrightarrow; git add . // add all files to the staging area</p>
             logical points after developing certin features of a website or application - we can spilt our work by
             different commits</p>
-            <p> &nLeftrightarrow; git commit -m "added index and style" // commit ( save ) files , 'm' stand for message
-                something descriptive
-                because
-                you will use them in future </p>
+            <p> &nLeftrightarrow; git commit -m "added index and style" // commit ( save ) files , 'm' stand for message </p>
             <p> &nLeftrightarrow; staging area is an extra blanket of security - allows us to review the changes before
                 making a commit -- committing
-            <p> &nLeftrightarrow; git log --oneline //each commit in one line</p>
-            <p> &nLeftrightarrow; git log //history of all commit</p>
+            <p> &nLeftrightarrow; git log --oneline // each commit in one line</p>
+            <p> &nLeftrightarrow; git log // history of all commit</p>
             <p class="title">Rename the local master branch to main</p>
             <p> &nLeftrightarrow; git branch -m master main</p>
             <p> &nLeftrightarrow; if it is not working try to commit something to the master branch and try again</p>
@@ -124,17 +121,19 @@
                 different two features each one make a branch to its feature and when they done we can merge them to the
                 master branch </p>
             <p> &nLeftrightarrow; we can also delete the branch</p>
-            <p> &nLeftrightarrow; git branch screenFeature //create new branch</p>
-            <p> &nLeftrightarrow; git branch -a //display all branches</p>
-            <p> &nLeftrightarrow; git checkout screenFeature //work in the screenFeature branch</p>
+            <p> &nLeftrightarrow; git branch screenFeature // create new branch</p>
+            <p> &nLeftrightarrow; git branch -a // display all branches</p>
+            <p> &nLeftrightarrow; git checkout screenFeature // work in the screenFeature branch</p>
             <p> &nLeftrightarrow; branche is like copy past the same project and work on it</p>
-            <p> &nLeftrightarrow; git branch -D screenFeature //delete a branch (not merged ? -D : -d)</p>
-            <p> &nLeftrightarrow; git checkout -b screenFeature //create and work in a new branch 'screenFeature' ( just
+            <p> &nLeftrightarrow; git branch -D screenFeature // delete a branch (not merged ? -D : -d)</p>
+            <p> &nLeftrightarrow; git checkout -b screenFeature // create and work in a new branch 'screenFeature' (
+                just
                 a shortcut)
             </p>
             <p class="title">Remove file from git</p>
-            <p>if the file is still in the staging area : <br> &nLeftrightarrow;  git reset &lt;  name_of_file &gt; // to unstage the file</p>
-            <p> remove the file from the repository  : <br> &nLeftrightarrow; git rm --cached &lt; name_of_file &gt; 
+            <p>if the file is still in the staging area : <br> &nLeftrightarrow; git reset &lt; name_of_file &gt; // to
+                unstage the file</p>
+            <p> remove the file from the repository : <br> &nLeftrightarrow; git rm --cached &lt; name_of_file &gt;
             </p>
         </section>
 
@@ -156,13 +155,14 @@
             <p> &nLeftrightarrow; if you have a local repository // ( clone a repo create a
                 local repository )</p>
             <p> &nLeftrightarrow; make sure all is commited : git status</p>
-            <p> &nLeftrightarrow; git push https://github.com/MohcineDev/gitDes.git master : push files to github repo
+            <p> &nLeftrightarrow; git push https:// github.com/MohcineDev/gitDes.git master : push files to github repo
                 with the master branch
             </p>
             <p> &nLeftrightarrow; clone by press the clone btn</p>
             <p class="title">add alias to a url</p>
-            <p> &nLeftrightarrow; git remote add aliasName https://github.com/projectname/name.git </p>
-            <p> &nLeftrightarrow; git remote add origin https://github.com/MohcineDev/gitDes.git : give the url an alias
+            <p> &nLeftrightarrow; git remote add aliasName https:// github.com/projectname/name.git </p>
+            <p> &nLeftrightarrow; git remote add origin https:// github.com/MohcineDev/gitDes.git : give the url an
+                alias
                 = origin</p>
             <p> &nLeftrightarrow; push after make changes</p>
             <p> &nLeftrightarrow; add code to staging area then commit</p>
@@ -170,7 +170,7 @@
 
             <p> &nLeftrightarrow; if you dont have a local repository</p>
             <p> &nLeftrightarrow; create one in github and clone it </p>
-            <p> &nLeftrightarrow; git clone https://github.com/MohcineDev/gitDes.git : clone repo and add alias origin
+            <p> &nLeftrightarrow; git clone https:// github.com/MohcineDev/gitDes.git : clone repo and add alias origin
             </p>
             <p> &nLeftrightarrow; make changes</p>
             <p> &nLeftrightarrow; git add . : add to staging area</p>
@@ -220,12 +220,13 @@
             <p>if the repo is already cloned remove the remote first</p>
             <p>&nLeftrightarrow; git remote remove &lt; remote name &gt;</p>
             <p>add the new remote with the token </p>
-            <p>&nLeftrightarrow; git remote add &lt;remote name&gt; https://&lt;accress token&gt;@github.com/&lt;username&gt;/&lt;repo
+            <p>&nLeftrightarrow; git remote add &lt;remote name&gt; https:// &lt;accress
+                token&gt;@github.com/&lt;username&gt;/&lt;repo
                 name&gt;.git</p>
         </section>
     </div>
     <div class="onGitHub">
-        <a href="https://github.com/MohcineDev" class="move" target="_blank">
+        <a href="https:// github.com/MohcineDev" class="move" target="_blank">
             @Mohcinedev</a>
     </div>
 </body>
