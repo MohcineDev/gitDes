@@ -91,6 +91,9 @@ h2 {
     border-left: 3px solid white;
     padding-left: 5px;
 }
+.project p:not(.project p:first-child) {
+    margin-left: 10px;
+}
 
 .project p:nth-child(3) {
     color: rgb(72, 255, 0);
