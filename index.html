@@ -48,7 +48,6 @@
             <p> &nLeftrightarrow; git config --global user.name "Your Name" </p>
             <p> &nLeftrightarrow; git config --global user.email "you@example.com" </p>
             <p> &nLeftrightarrow; git config --global user.name : get the name</p>
-            <p> &nLeftrightarrow; to set your account default identity. </p>
         </section>
 
         <section>
@@ -64,7 +63,8 @@
             <p> &nLeftrightarrow; git add . // add all files to the staging area</p>
             logical points after developing certin features of a website or application - we can spilt our work by
             different commits</p>
-            <p> &nLeftrightarrow; git commit -m "added index and style" // commit ( save ) files , 'm' stand for message </p>
+            <p> &nLeftrightarrow; git commit -m "added index and style" // commit ( save ) files , 'm' stand for message
+            </p>
             <p> &nLeftrightarrow; staging area allows us to review the changes before
                 commit the changes </p>
             <p> &nLeftrightarrow; git log --oneline // each commit in one line</p>
@@ -84,7 +84,10 @@
                     <p>Reset commit (unsafe)</p>
                 </div>
             </div>
-            <p> &nLeftrightarrow; git checkout af6b84c // af6b84c = commit id (detach this commit from the master
+
+            <p> &nLeftrightarrow; git log // get all the commits with their id</p>
+
+            <p> &nLeftrightarrow; git checkout af6b84c // af6b84c : commit id (detach this commit from the master
                 branch)</p>
             <p>and see how the code is looks like before this commit this does not affect the commit history just
                 readonly</p>
@@ -92,33 +95,30 @@
                 normal</p>
             <p>after checking the code go back to the normal state</p>
             <hr>
-            <p> &nLeftrightarrow; git revert af6b84c // af6b84c = commit id, :wq ( undo one particular commit
+            <p> &nLeftrightarrow; git revert af6b84c // af6b84c : commit id, :wq ( undo one particular commit
                 (this commande do a commit
                 for us just revert the given commit 'add border' become 'Revert "add border"' ))
             </p>
             <p>revert the giving commit (af6b84c)</p>
             <hr>
-            <p> &nLeftrightarrow; git reset af6b84c // af6b84c = commit id ( remove all the commit after this commit id
+            <p> &nLeftrightarrow; git reset af6b84c // af6b84c : commit id ( remove all the commit after this commit id
                 but not changing the
                 files)</p>
-            <p> &nLeftrightarrow; git reset af6b84c --hard // af6b84c = commit id, --hard // remove the changes after
+            <p> &nLeftrightarrow; git reset af6b84c --hard // af6b84c : commit id, --hard // remove the changes after
                 this
                 commit id - reset the code to a particular commit</p>
         </section>
 
         <section>
             <h2>Branches</h2>
-            <p> &nLeftrightarrow; create a new repository also creates a master branch and when we making commits
-                we commit only to
-                this
-                master branch</p>
-
+            <p> &nLeftrightarrow; when creating a new repository it also creates a master branch </p>
             <p> &nLeftrightarrow; master branch represent the stable version of the code which will be released or
                 published</p>
             <p> &nLeftrightarrow; if we need to add a new feature to our code we add it to a new branch and if we like
                 it we can merge this branch with the master branch</p>
-            <p> &nLeftrightarrow; if we have to developers working on the same project on the same time doing two
-                different two features each one make a branch to its feature and when they done we can merge them to the
+            <p> &nLeftrightarrow; if we have two developers working on the same 
+                project they can create a new branch for each 
+                feature and when they done we can merge them to the
                 master branch </p>
             <p> &nLeftrightarrow; we can also delete the branch</p>
             <p> &nLeftrightarrow; git branch screenFeature // create new branch</p>
