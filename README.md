@@ -5,3 +5,7 @@ Rename the local master branch to main (default in [GitHub](https://github.blog/
 > git branch -m master main
 
 if it is not working try to commit something to the master branch and try again
+
+---------
+
+color palette from  [colorhunt](colorhunt.co) using space collection
