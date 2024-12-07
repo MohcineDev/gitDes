@@ -2,10 +2,7 @@
     --dark: #17153B;
     --light1: #2E236C;
     --light2: #433D8B;
-
     --light: #C8ACD6;
-
-
 }
 
 body {
@@ -15,7 +12,7 @@ body {
 }
 
 p::selection {
-    background-color:var(--dark);
+    background-color: var(--dark);
     color: var(--light);
 }
 
@@ -185,4 +182,8 @@ p.title {
     animation-iteration-count: infinite;
     animation-duration: 3s;
     animation-timing-function: linear;
+}
+
+em{
+    color: #999;
 }
