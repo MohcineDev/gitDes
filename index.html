@@ -1,236 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./fav.png" />
-    <link rel="stylesheet" href="style.css">
-    <title>Git Description</title>
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Commands Cheat Sheet</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your CSS file -->
+  </head>
+  <body>
     <div class="container">
+      <!-- Existing sections -->
+      <section>
+        <h2>Basic Git Commands</h2>
+        <p>
+          <span class="green">git init</span> - Initialize a new Git repository.
+        </p>
+        <p>
+          <span class="green">git clone [url]</span> - Clone a repository from a
+          remote URL.
+        </p>
+        <p>
+          <span class="green">git add [file]</span> - Add files to the staging
+          area.
+        </p>
+        <p>
+          <span class="green">git commit -m "[message]"</span> - Commit changes
+          with a message.
+        </p>
+        <p>
+          <span class="green">git status</span> - Check the status of the
+          working directory.
+        </p>
+      </section>
 
-        <section>
-            <h2> Definition</h2>
-            <p> &nLeftrightarrow; Repositories is just a container for a project you want to track with Git</p>
-            <p> &nLeftrightarrow; Commit : Save point</p>
-            <p> &nLeftrightarrow; Modified : file created or modified</p>
-            <p> &nLeftrightarrow; github is a service that lets us set up hosted repositories , remote repositories</p>
-            <p> &nLeftrightarrow; central online repository which multiple team-members could access </p>
+      <section>
+        <h2>Branching & Merging</h2>
+        <p><span class="green">git branch</span> - List all branches.</p>
+        <p>
+          <span class="green">git branch [branch-name]</span> - Create a new
+          branch.
+        </p>
+        <p>
+          <span class="green">git checkout [branch-name]</span> - Switch to a
+          branch.
+        </p>
+        <p>
+          <span class="green">git merge [branch]</span> - Merge a branch into
+          the active branch.
+        </p>
+        <p>
+          <span class="green">git branch -d [branch-name]</span> - Delete a
+          branch.
+        </p>
+      </section>
 
-            <div class="main">
-                <div class="project">
-                    <p> &nLeftrightarrow; myProject folder</p>
-                    <p> &nLeftrightarrow; -- .get</p>
-                    <p> &nLeftrightarrow; -- index.html</p>
-                    <p> &nLeftrightarrow; -- style.css</p>
-                </div>
-                <div class="table">
+      <section>
+        <h2>Remote Repositories</h2>
+        <p>
+          <span class="green">git remote add [name] [url]</span> - Add a remote
+          repository.
+        </p>
+        <p>
+          <span class="green">git fetch [remote]</span> - Fetch changes from a
+          remote repository.
+        </p>
+        <p>
+          <span class="green">git pull [remote] [branch]</span> - Pull changes
+          from a remote branch.
+        </p>
+        <p>
+          <span class="green">git push [remote] [branch]</span> - Push changes
+          to a remote branch.
+        </p>
+        <p>
+          <span class="green">git remote -v</span> - List all remote
+          repositories.
+        </p>
+      </section>
 
-                    <table>
-                        <tr>
-                            <th>Modified</th>
-                            <th>Staging</th>
-                            <th>Committed</th>
-                        </tr>
-                        <tr>
-                            <td>index.html</td>
-                            <td>add any changed files to staging<br> area
-                                that you want to commit</td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <p> &nLeftrightarrow; git --version : check the installed version of git </p>
-            <p> &nLeftrightarrow; config git username and email </p>
-            <p> &nLeftrightarrow; git config --global user.name "Your Name" </p>
-            <p> &nLeftrightarrow; git config --global user.email "you@example.com" </p>
-            <p> &nLeftrightarrow; git config --global user.name : get the name</p>
-        </section>
+      <section>
+        <h2>Undoing Changes</h2>
+        <p>
+          <span class="green">git reset [file]</span> - Unstage a file while
+          retaining changes.
+        </p>
+        <p>
+          <span class="green">git reset --hard</span> - Discard all changes in
+          the working directory.
+        </p>
+        <p>
+          <span class="green">git revert [commit]</span> - Revert a commit by
+          creating a new commit.
+        </p>
+        <p>
+          <span class="green">git checkout [file]</span> - Discard changes in a
+          specific file.
+        </p>
+        <p>
+          <span class="green">git clean -fd</span> - Remove untracked files and
+          directories.
+        </p>
+      </section>
 
-        <section>
+      <section>
+        <h2>Advanced Commands</h2>
+        <p><span class="green">git stash</span> - Temporarily stash changes.</p>
+        <p>
+          <span class="green">git stash pop</span> - Apply stashed changes and
+          remove them from the stash list.
+        </p>
+        <p>
+          <span class="green">git rebase [branch]</span> - Rebase the current
+          branch onto another branch.
+        </p>
+        <p>
+          <span class="green">git cherry-pick [commit]</span> - Apply a specific
+          commit to the current branch.
+        </p>
+        <p>
+          <span class="green">git bisect</span> - Use binary search to find the
+          commit that introduced a bug.
+        </p>
+      </section>
 
-            <h2>Commandes</h2>
-            <p> &nLeftrightarrow; git init <em>// turn the folder into a git repo ( folder tracked with git )</em>
-            </p>
-            <p> &nLeftrightarrow; git status <em> // if = <span class="red">red</span> files changed and ready to be staged
-                // if = <span class="green">green</span> files staged and ready to be committed</em></p>
-            <p> &nLeftrightarrow; git add index.html <span>// add ' index.html ' file to the staging area</span> </p>
-            <p> &nLeftrightarrow; git reset <em>// remove all files from staging area</em></p>
-            <p> &nLeftrightarrow; git rm --cached index.html <em>// remove ' index.html ' file from staging area</em> </p>
-            <p> &nLeftrightarrow; git add . <em>// add all files to the staging area</em></p>
-            logical points after developing certain features of a website or application - we can split our work by
-            different commits</p>
-            <p> &nLeftrightarrow; git commit -m "added index and style" <em>// commit ( save ) files , 'm' stands for message</em>
-            </p>
-            <p> &nLeftrightarrow; staging area allows us to review the changes before
-                committing them</p>
-            <p> &nLeftrightarrow; git log --oneline <em>// each commit in one line</em> </p>
-            <p> &nLeftrightarrow; git log <em>// history of all commit</em> </p>
-            <p class="title">Rename the local master branch to main</p>
-            <p> &nLeftrightarrow; git branch -m master main</p>
-            <p> <em>// if it is not working try to commit something to the master branch and try again</em></p>
-            <p class="title">Add Submodule</p>
-            <p> &nLeftrightarrow; git submodule add &lt;repo-link&gt; <em>// repo inside repo</em></p>
-        </section>
+      <section>
+        <h2>Logs & History</h2>
+        <p><span class="green">git log</span> - View commit history.</p>
+        <p>
+          <span class="green">git log --oneline</span> - View a simplified
+          commit history.
+        </p>
+        <p>
+          <span class="green">git log --graph</span> - View commit history with
+          a graph.
+        </p>
+        <p>
+          <span class="green">git show [commit]</span> - Show details of a
+          specific commit.
+        </p>
+        <p>
+          <span class="green">git diff [commit1] [commit2]</span> - Compare two
+          commits.
+        </p>
+      </section>
 
-        <section>
-            <h2>Undo</h2>
-            <div>
-                <h3> undoing things (order of danger)</h3>
-                <div class="commit">
-                    <p>Checkout commit (safe)</p>
-                    <p>Revert commit (little safe)</p>
-                    <p>Reset commit (unsafe)</p>
-                </div>
-            </div>
+      <section>
+        <h2>Configuration</h2>
+        <p>
+          <span class="green">git config --global user.name "[name]"</span> -
+          Set your username.
+        </p>
+        <p>
+          <span class="green">git config --global user.email "[email]"</span> -
+          Set your email.
+        </p>
+        <p>
+          <span class="green">git config --list</span> - List all Git
+          configurations.
+        </p>
+        <p>
+          <span class="green">git config --global core.editor "[editor]"</span>
+          - Set your default text editor.
+        </p>
+        <p>
+          <span class="green"
+            >git config --global alias.[alias-name] "[command]"</span
+          >
+          - Create a Git alias.
+        </p>
+      </section>
 
-            <p> &nLeftrightarrow; git log // get all the commits with their id</p>
-
-            <p> &nLeftrightarrow; git checkout af6b84c // af6b84c : commit id (detach this commit from the master
-                branch)</p>
-            <p>and see how the code is looks like before this commit this does not affect the commit history just
-                readonly</p>
-            <p> &nLeftrightarrow; git checkout master // reatach to the master bracnch ( like undo : Ctrl+z) back to
-                normal</p>
-            <p>after checking the code go back to the normal state</p>
-            <hr>
-            <p> &nLeftrightarrow; git revert af6b84c // af6b84c : commit id, :wq ( undo one particular commit
-                (this commande do a commit
-                for us just revert the given commit 'add border' become 'Revert "add border"' ))
-            </p>
-            <p>revert the giving commit (af6b84c)</p>
-            <hr>
-            <p> &nLeftrightarrow; git reset af6b84c // af6b84c : commit id ( remove all the commit after this commit id
-                but not changing the
-                files)</p>
-            <p> &nLeftrightarrow; git reset af6b84c --hard // af6b84c : commit id, --hard // remove the changes after
-                this
-                commit id - reset the code to a particular commit</p>
-        </section>
-
-        <section>
-            <h2>Branches</h2>
-            <p> &nLeftrightarrow; when creating a new repository it also creates a master branch </p>
-            <p> &nLeftrightarrow; master branch represent the stable version of the code which will be released or
-                published</p>
-            <p> &nLeftrightarrow; if we need to add a new feature to our code we add it to a new branch and if we like
-                it we can merge this branch with the master branch</p>
-            <p> &nLeftrightarrow; if we have two developers working on the same 
-                project they can create a new branch for each 
-                feature and when they done we can merge them to the
-                master branch </p>
-            <p> &nLeftrightarrow; we can also delete the branch</p>
-            <p> &nLeftrightarrow; git branch screenFeature // create new branch</p>
-            <p> &nLeftrightarrow; git branch -a // display all branches</p>
-            <p> &nLeftrightarrow; git checkout screenFeature // work in the screenFeature branch</p>
-            <p> &nLeftrightarrow; branche is like copy past the same project and work on it</p>
-            <p> &nLeftrightarrow; git branch -D screenFeature // delete a branch (not merged ? -D : -d)</p>
-            <p> &nLeftrightarrow; git checkout -b screenFeature // create and work in a new branch 'screenFeature' (
-                just
-                a shortcut)
-            </p>
-            <p class="title">Remove file from git</p>
-            <p>if the file is still in the staging area : <br> &nLeftrightarrow; git reset &lt; name_of_file &gt; // to
-                unstage the file</p>
-            <p> remove the file from the repository : <br> &nLeftrightarrow; git rm --cached &lt; name_of_file &gt;
-            </p>
-        </section>
-
-        <section>
-            <h2>Merging Branches Conflicts</h2>
-            <p> &nLeftrightarrow; when you are happy with the features</p>
-            <p> &nLeftrightarrow; first you have to be in the branch you want to merge into (master)</p>
-            <p> &nLeftrightarrow; git merge feature-a : merge the code in feature-a with master</p>
-            <p> &nLeftrightarrow; git merge feature-b : merge the code in feature-b with master</p>
-            <p> &nLeftrightarrow; ' when you create a new branch and change something in the master and change the same
-                thing in the new
-                branch this may create a conflict when you want to merge them '</p>
-            <p> &nLeftrightarrow; after merging, you can push the master branch to GitHub </p>
-        </section>
-
-        <section>
-            <h2>Github</h2>
-
-            <p> &nLeftrightarrow; if you have a local repository <em>// ( clone a repo create a local repository )</em></p>
-            <p> &nLeftrightarrow; make sure all is commited : git status</p>
-            <p> &nLeftrightarrow; git push https:// github.com/MohcineDev/gitDes.git master <em>// push files to Github repo
-                with the master branch</em>
-            </p>
-            <p> &nLeftrightarrow; clone by press the clone btn</p>
-            <p class="title">add alias to a url</p>
-            <p> &nLeftrightarrow; git remote add aliasName https:// github.com/projectname/name.git </p>
-            <p> &nLeftrightarrow; git remote add origin https:// github.com/MohcineDev/gitDes.git <em>// give the url an alias = origin</em></p>
-            <p> &nLeftrightarrow; push after make changes</p>
-            <p> &nLeftrightarrow; add code to staging area then commit</p>
-            <p> &nLeftrightarrow; git push origin master</p>
-            <p class="title">update remote</p>
-            <p> &nLeftrightarrow; git remote set-url origin &lt;new-url&gt; </p>
-
-            <p> &nLeftrightarrow; if you dont have a local repository</p>
-            <p> &nLeftrightarrow; create one in github and clone it </p>
-            <p> &nLeftrightarrow; git clone https:// github.com/MohcineDev/gitDes.git <em>// clone repo and add alias origin</em>
-            </p>
-            <p> &nLeftrightarrow; make changes</p>
-            <p> &nLeftrightarrow; git add . <em>// add to staging area</em> </p>
-            <p> &nLeftrightarrow; git commit -m "added index. file" <em>//commit changes</em> </p>
-            <p> &nLeftrightarrow; git remote -v <em> info about the alias for push and fetch</em></p>
-            <p> &nLeftrightarrow; git push origin master <em> push master branch files to github</em></p>
-        </section>
-
-
-        <section>
-            <h2>Collaborate</h2>
-            <p> &nLeftrightarrow; first make sure you are in master (update our master) and everything is commited</p>
-            <p> &nLeftrightarrow; git pull origin master : pull code from remote master branch and update our local
-                master branch with it
-            </p>
-            <p> &nLeftrightarrow; git checkout -b index-html : create your working branch dont miss with the master</p>
-            <p> &nLeftrightarrow; add to staging area and commit it </p>
-            <p> &nLeftrightarrow; dont merge it with master</p>
-            <p> &nLeftrightarrow; git push origin index-html : push your branch to give your team the chance to
-                reviewing
-                it before merging
-                it
-                with master</p>
-            <p> &nLeftrightarrow; git pull origin master :</p>
-
-            <p> &nLeftrightarrow; fork means create a copy of the repo from the main account to our account</p>
-            <p> &nLeftrightarrow; clone it make changes commit it push it to github</p>
-            <p> &nLeftrightarrow; click btn 'new pull request' ..</p>
-            <hr>
-            <hr>
-            <p> &nLeftrightarrow; 1 : fork the open source repo to your account </p>
-            <p> &nLeftrightarrow; 2 : clone the repo </p>
-            <p> &nLeftrightarrow; 3 : create your branch </p>
-            <p> &nLeftrightarrow; 4 : commit your changes </p>
-            <p> &nLeftrightarrow; 5 : push the changes to your account </p>
-            <p> &nLeftrightarrow; Contribute this changes to the original repository </p>
-            <p> &nLeftrightarrow; 1 : click btn 'new pull request' .. </p>
-            <p> &nLeftrightarrow; 2 : see if it can be merged </p>
-            <p> &nLeftrightarrow; 3 : press create pull request </p>
-            <p> &nLeftrightarrow; and the rest is on the repo owner </p>
-        </section>
-
-        <section>
-            <h2>Using Token</h2>
-            <p>Token authentication requirements for Git operations </p>
-            <p>using access token instead of password</p>
-            <p>if the repo is already cloned remove the remote first</p>
-            <p>&nLeftrightarrow; git remote remove &lt; remote name &gt;</p>
-            <p>add the new remote with the token </p>
-            <p>&nLeftrightarrow; git remote add &lt;remote name&gt; https:// &lt;accress
-                token&gt;@github.com/&lt;username&gt;/&lt;repo
-                name&gt;.git</p>
-        </section>
+      <section>
+        <h2>Useful Tips</h2>
+        <p>
+          <span class="green">git reflog</span> - View a log of all reference
+          updates.
+        </p>
+        <p>
+          <span class="green">git blame [file]</span> - Show who last modified
+          each line of a file.
+        </p>
+        <p>
+          <span class="green">git grep [pattern]</span> - Search for a pattern
+          in the working directory.
+        </p>
+        <p>
+          <span class="green">git tag [tag-name]</span> - Create a tag for a
+          specific commit.
+        </p>
+        <p>
+          <span class="green">git archive</span> - Create an archive of files
+          from a named tree.
+        </p>
+      </section>
     </div>
-    <div class="onGitHub">
-        <a href="https:// github.com/MohcineDev" class="move" target="_blank">
-            @Mohcinedev</a>
-    </div>
-</body>
-
+  </body>
 </html>
