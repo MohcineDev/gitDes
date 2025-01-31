@@ -67,8 +67,10 @@ section:nth-child(6) {
 }
 
 section:nth-child(7) {
-  grid-area: 4/1/5/3;
-  grid-area: 4/1/5/3;
+  grid-area: 4/1/5/2;
+}
+section:nth-child(8) {
+  grid-area: 4/2/5/3;
 }
 
 body section:last-child {
